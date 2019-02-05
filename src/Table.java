@@ -4,7 +4,7 @@ import java.util.List;
 public class Table {
     public List<Cube> sommetDePile = new ArrayList<Cube> ();
 
-    public boolean existeSommet(TailleCube Taille, String Couleur) {
+    public Cube existeSommet(TailleCube Taille, Couleur Couleur) {
 //begin of modifiable zone(JavaCode)......C/ea76f496-0991-4027-870a-082569861639
 
 //end of modifiable zone(JavaCode)........E/ea76f496-0991-4027-870a-082569861639
@@ -13,7 +13,7 @@ public class Table {
 //end of modifiable zone(JavaReturned)....E/ea76f496-0991-4027-870a-082569861639
     }
 
-    public Cube retireSommet(TailleCube Taille, String Couleur) {
+    public Cube retireSommet(TailleCube Taille, Couleur Couleur) {
 //begin of modifiable zone(JavaCode)......C/f3a9ab2f-56bd-49c4-893d-a2656e97466c
 
 //end of modifiable zone(JavaCode)........E/f3a9ab2f-56bd-49c4-893d-a2656e97466c
@@ -34,7 +34,7 @@ public class Table {
 //end of modifiable zone(JavaCode)........E/93100a01-6b8f-49f7-9c75-4449cfbc1fdd
     }
 
-    public boolean poserCubeSurCube(TailleCube taille, String couleur, Cube cube) {
+    public boolean poserCubeSurCube(TailleCube taille, Couleur couleur, Cube cube) {
 //begin of modifiable zone(JavaCode)......C/cdcdc004-860b-4e1a-a8d3-68d5391e1d10
 
 //end of modifiable zone(JavaCode)........E/cdcdc004-860b-4e1a-a8d3-68d5391e1d10
