@@ -50,7 +50,7 @@ public class Robot {
 //end of modifiable zone(JavaReturned)....E/a61de092-67c4-428d-a37d-44f0f364763a
     }
 
-    public boolean poserCubeSurCube(TailleCube taille, String couleur) {
+    public boolean poserCubeSurCube(TailleCube taille, Couleur couleur) {
 //begin of modifiable zone(JavaCode)......C/7a727d34-b840-4b49-b411-f24a953a4dcc
 
 //end of modifiable zone(JavaCode)........E/7a727d34-b840-4b49-b411-f24a953a4dcc
