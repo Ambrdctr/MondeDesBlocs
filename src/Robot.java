@@ -3,21 +3,15 @@ public class Robot {
     public Cube cubeTenu;
 
     public boolean creerCube(TailleCube taille, Couleur couleur) {
-//begin of modifiable zone(JavaCode)......C/cbcc23a3-773a-4325-ab58-4c31de565109
-
-//end of modifiable zone(JavaCode)........E/cbcc23a3-773a-4325-ab58-4c31de565109
-//begin of modifiable zone(JavaReturned)..C/cbcc23a3-773a-4325-ab58-4c31de565109
-
-//end of modifiable zone(JavaReturned)....E/cbcc23a3-773a-4325-ab58-4c31de565109
+        if (pinceLibre()){
+            Cube cubeTenu = new Cube(couleur, taille);
+            return true;
+        }
+        return false;
     }
 
     public boolean pinceLibre() {
-//begin of modifiable zone(JavaCode)......C/2c3c0591-c2b5-47c9-9491-bef8fbf206c1
 
-//end of modifiable zone(JavaCode)........E/2c3c0591-c2b5-47c9-9491-bef8fbf206c1
-//begin of modifiable zone(JavaReturned)..C/2c3c0591-c2b5-47c9-9491-bef8fbf206c1
-
-//end of modifiable zone(JavaReturned)....E/2c3c0591-c2b5-47c9-9491-bef8fbf206c1
     }
 
     public boolean tenirCube(Cube CubeATenir) {
