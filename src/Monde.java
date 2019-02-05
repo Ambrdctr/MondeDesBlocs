@@ -24,7 +24,7 @@ public class Monde {
 		TailleCube tc;
 		do {
 		System.out.println("1 - creer un cube");
-		System.out.println("2 - détruire un cube");
+		System.out.println("2 - dÃ©truire un cube");
 		System.out.println("3 - prendre un cube");
 		System.out.println("f - fin du monde");
 		System.out.print("Votre choix : ");
@@ -39,7 +39,7 @@ public class Monde {
 			D2R2.creerCube(coul, tc);
 			break;
 		case '2':
-			System.out.println("Le cube tenu par le robot va être détruit ");
+			System.out.println("Le cube tenu par le robot va Ãªtre dÃ©truit ");
 			Keyboard.pause();
 			D2R2.detruireCube();
 			break;
