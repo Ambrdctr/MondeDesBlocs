@@ -3,7 +3,7 @@ import com.sun.org.apache.xpath.internal.operations.Bool;
 public class Robot {
     public Cube cubeTenu;
 
-    public Bool créerCube(TailleCube Taille, String Couleur) {
+    public Bool creerCube(TailleCube Taille, String Couleur) {
 //begin of modifiable zone(JavaCode)......C/cbcc23a3-773a-4325-ab58-4c31de565109
 
 //end of modifiable zone(JavaCode)........E/cbcc23a3-773a-4325-ab58-4c31de565109
@@ -30,7 +30,7 @@ public class Robot {
 //end of modifiable zone(JavaReturned)....E/84153ce6-df5c-44c0-a0f7-eb19bb8943d9
     }
 
-    public Bool détruireCube() {
+    public Bool detruireCube() {
 //begin of modifiable zone(JavaCode)......C/7100d31b-740d-4a9e-8348-921e0ef3baae
 
 //end of modifiable zone(JavaCode)........E/7100d31b-740d-4a9e-8348-921e0ef3baae
@@ -73,6 +73,15 @@ public class Robot {
 //begin of modifiable zone(JavaReturned)..C/279a2ed8-b923-4ca0-96af-4194935815f4
 
 //end of modifiable zone(JavaReturned)....E/279a2ed8-b923-4ca0-96af-4194935815f4
+    }
+
+    public Robot() {
+//begin of modifiable zone(JavaSuper).....C/6a90e436-6c89-4c81-b6ff-86ac27d0d280
+
+//end of modifiable zone(JavaSuper).......E/6a90e436-6c89-4c81-b6ff-86ac27d0d280
+//begin of modifiable zone(JavaCode)......C/6a90e436-6c89-4c81-b6ff-86ac27d0d280
+
+//end of modifiable zone(JavaCode)........E/6a90e436-6c89-4c81-b6ff-86ac27d0d280
     }
 
 }
