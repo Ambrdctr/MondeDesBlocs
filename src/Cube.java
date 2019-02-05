@@ -1,5 +1,3 @@
-import com.sun.org.apache.xpath.internal.operations.Bool;
-
 public class Cube {
     private TailleCube Taille;
 
@@ -71,7 +69,7 @@ public class Cube {
     	this.setDessus(cube);
     }
 
-    public Bool correspond(String couleur, TailleCube taille) {
+    public Boolean correspond(String couleur, TailleCube taille) {
     	return this.getCouleur().equals(couleur) && this.getTaille().equals(taille);
     }
 
