@@ -1,3 +1,4 @@
+
 public class Cube {
     private TailleCube Taille;
 
@@ -60,17 +61,42 @@ public class Cube {
     }
 
     public void suivant(Cube cube) {
-    	// On part du principe que l'on set le suivant de la liste mais que c'est celui en dessous physiquement
-    	this.setDessous(cube);
+//begin of modifiable zone(JavaCode)......C/dd2d6f8b-63c7-4692-a078-0ef546782157
+
+//end of modifiable zone(JavaCode)........E/dd2d6f8b-63c7-4692-a078-0ef546782157
     }
 
     public void precedent(Cube cube) {
-    	// On part du principe que l'on set le precedent de la liste mais que c'est celui en dessus physiquement
-    	this.setDessus(cube);
+//begin of modifiable zone(JavaCode)......C/e578f63d-323b-42bd-934b-89b03eb7ae76
+
+//end of modifiable zone(JavaCode)........E/e578f63d-323b-42bd-934b-89b03eb7ae76
     }
 
-    public Boolean correspond(String couleur, TailleCube taille) {
-    	return this.getCouleur().equals(couleur) && this.getTaille().equals(taille);
+    public boolean correspond(Couleur couleur, TailleCube taille) {
+//begin of modifiable zone(JavaCode)......C/c365aba3-65f1-4377-abdc-3c05a49a56a3
+
+//end of modifiable zone(JavaCode)........E/c365aba3-65f1-4377-abdc-3c05a49a56a3
+//begin of modifiable zone(JavaReturned)..C/c365aba3-65f1-4377-abdc-3c05a49a56a3
+
+//end of modifiable zone(JavaReturned)....E/c365aba3-65f1-4377-abdc-3c05a49a56a3
+    }
+
+    public Cube() {
+//begin of modifiable zone(JavaSuper).....C/298de1f2-00bc-4e3d-b1a5-08cf56ecf817
+
+//end of modifiable zone(JavaSuper).......E/298de1f2-00bc-4e3d-b1a5-08cf56ecf817
+//begin of modifiable zone(JavaCode)......C/298de1f2-00bc-4e3d-b1a5-08cf56ecf817
+
+//end of modifiable zone(JavaCode)........E/298de1f2-00bc-4e3d-b1a5-08cf56ecf817
+    }
+
+    public Cube(Couleur couleur, TailleCube taille) {
+//begin of modifiable zone(JavaSuper).....C/0c7c6fcb-0a47-4033-b9c9-c5123c0ff565
+
+//end of modifiable zone(JavaSuper).......E/0c7c6fcb-0a47-4033-b9c9-c5123c0ff565
+//begin of modifiable zone(JavaCode)......C/0c7c6fcb-0a47-4033-b9c9-c5123c0ff565
+
+//end of modifiable zone(JavaCode)........E/0c7c6fcb-0a47-4033-b9c9-c5123c0ff565
     }
 
 }
