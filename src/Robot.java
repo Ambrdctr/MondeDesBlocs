@@ -1,6 +1,6 @@
 
 public class Robot {
-    public Cube cubeTenu;
+    public Cube cubeTenu = null;
 
     public boolean creerCube(TailleCube taille, Couleur couleur) {
         if (pinceLibre()){
@@ -11,7 +11,10 @@ public class Robot {
     }
 
     public boolean pinceLibre() {
-
+        if (cubeTenu == null){
+            return true;
+        }
+        return false;
     }
 
     public boolean tenirCube(Cube CubeATenir) {
@@ -24,30 +27,26 @@ public class Robot {
     }
 
     public boolean detruireCube() {
-//begin of modifiable zone(JavaCode)......C/7100d31b-740d-4a9e-8348-921e0ef3baae
-
-//end of modifiable zone(JavaCode)........E/7100d31b-740d-4a9e-8348-921e0ef3baae
-//begin of modifiable zone(JavaReturned)..C/7100d31b-740d-4a9e-8348-921e0ef3baae
-
-//end of modifiable zone(JavaReturned)....E/7100d31b-740d-4a9e-8348-921e0ef3baae
+        if (!pinceLibre()){
+            lacherCube();
+        }
+        return false;
     }
 
     public boolean lacherCube() {
-//begin of modifiable zone(JavaCode)......C/6b3607e5-fe7b-40ba-8e89-55a81087c686
-
-//end of modifiable zone(JavaCode)........E/6b3607e5-fe7b-40ba-8e89-55a81087c686
-//begin of modifiable zone(JavaReturned)..C/6b3607e5-fe7b-40ba-8e89-55a81087c686
-
-//end of modifiable zone(JavaReturned)....E/6b3607e5-fe7b-40ba-8e89-55a81087c686
+        cubeTenu = null;
+        return true;
     }
 
     public boolean prendreCube(TailleCube taille, Couleur couleur) {
-//begin of modifiable zone(JavaCode)......C/a61de092-67c4-428d-a37d-44f0f364763a
+        if (!pinceLibre()){
+            return false;
+        }
+        else {
+            if (existeSommet(taille, couleur)){
 
-//end of modifiable zone(JavaCode)........E/a61de092-67c4-428d-a37d-44f0f364763a
-//begin of modifiable zone(JavaReturned)..C/a61de092-67c4-428d-a37d-44f0f364763a
-
-//end of modifiable zone(JavaReturned)....E/a61de092-67c4-428d-a37d-44f0f364763a
+            }
+        }
     }
 
     public boolean poserCubeSurCube(TailleCube taille, Couleur couleur) {
