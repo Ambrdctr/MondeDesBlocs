@@ -84,7 +84,18 @@ public class Cube {
     }
     
     public void afficherCube() {
-    	
+    	System.out.print("| " + this);
+    }
+    
+    public void afficherPile() {
+    	Cube current, next;
+    	current = this;
+    	next = current.getDessous();
+    	do {
+    		current.afficherCube();
+    		current = next;
+    		next = current.getDessous();
+    	} while (next != null);
     }
 
 }

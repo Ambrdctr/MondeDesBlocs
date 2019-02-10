@@ -35,7 +35,7 @@ public class Table {
     	if (poserPossible(taille, cube.getTaille())) {
     		Cube findedCube = retireSommet(taille, couleur);
         	if (findedCube != null) {
-        		cube.precedent(findedCube);
+        		cube.suivant(findedCube);
         		nouveauSommet(cube);
         		return true;
         	}
@@ -60,6 +60,13 @@ public class Table {
 
     public Table() {
     	
+    }
+    
+    public void afficherTable() {
+    	for (int i = 0; i < sommetDePile.size(); i++) {
+    		sommetDePile.get(i).afficherCube();
+    		System.out.println("");
+    	}
     }
 
 }
