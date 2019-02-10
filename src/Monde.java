@@ -18,7 +18,7 @@ public class Monde {
 	public static void main(String[] args) {
 //		Couleur.testCouleur();
 		Table tab = new Table();
-		Robot D2R2 = new Robot(tab);
+		Robot POC3 = new Robot(tab);
 		char c = ' ';
 		Couleur coul;
 		TailleCube tc;
@@ -36,15 +36,15 @@ public class Monde {
 //			ecrire (coul, "couleur saisie");
 			System.out.print("Taille (grand/moyen/petit) : ");
 			tc = TailleCube.getTaille(Keyboard.getString());
-			D2R2.creerCube(coul, tc);
+			POC3.creerCube(coul, tc);
 			break;
 		case '2':
 			System.out.println("Le cube tenu par le robot va être détruit ");
 			Keyboard.pause();
-			D2R2.detruireCube();
+			POC3.detruireCube();
 			break;
 		}
-		afficherMonde(D2R2, tab);
+		afficherMonde(POC3, tab);
 		} while (c != 'f');
 	}
 

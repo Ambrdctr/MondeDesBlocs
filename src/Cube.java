@@ -2,7 +2,7 @@
 public class Cube {
     private TailleCube Taille;
 
-    private TailleCube getTaille() {
+    public TailleCube getTaille() {
         // Automatically generated method. Please do not modify this code.
         return this.Taille;
     }
@@ -77,13 +77,25 @@ public class Cube {
     	setTaille(TailleCube.grand);
     }
 
-    public Cube(Couleur couleur, TailleCube taille) {
-    	setCouleur(couleur);
+    public Cube(TailleCube taille, Couleur couleur) {
     	setTaille(taille);
+    	setCouleur(couleur);
+    	
     }
     
     public void afficherCube() {
-    	
+    	System.out.print("| " + this);
+    }
+    
+    public void afficherPile() {
+    	Cube current, next;
+    	current = this;
+    	next = current.getDessous();
+    	do {
+    		current.afficherCube();
+    		current = next;
+    		next = current.getDessous();
+    	} while (next != null);
     }
 
 }
