@@ -2,7 +2,7 @@
 public class Cube {
     private TailleCube Taille;
 
-    private TailleCube getTaille() {
+    public TailleCube getTaille() {
         // Automatically generated method. Please do not modify this code.
         return this.Taille;
     }
@@ -77,9 +77,10 @@ public class Cube {
     	setTaille(TailleCube.grand);
     }
 
-    public Cube(Couleur couleur, TailleCube taille) {
-    	setCouleur(couleur);
+    public Cube(TailleCube taille, Couleur couleur) {
     	setTaille(taille);
+    	setCouleur(couleur);
+    	
     }
     
     public void afficherCube() {
