@@ -88,14 +88,12 @@ public class Cube {
     }
     
     public void afficherPile() {
-    	Cube current, next;
+    	Cube current;
     	current = this;
-    	next = current.getDessous();
-    	do {
+    	while (current != null) {
     		current.afficherCube();
-    		current = next;
-    		next = current.getDessous();
-    	} while (next != null);
+    		current = current.getDessous();
+    	}
     }
 
 }

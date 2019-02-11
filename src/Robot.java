@@ -37,16 +37,18 @@ public class Robot {
 
     public boolean poserCubeSurCube(TailleCube taille, Couleur couleur) {
     	if (!pinceLibre()) {
-    		table.poserCubeSurCube(taille, couleur, cubeTenu);
-    		return lacherCube();
+    		if (table.poserCubeSurCube(taille, couleur, cubeTenu)) {
+    			return lacherCube();
+    		}
     	}
     	return false;
     }
 
     public boolean poserCubeSurTable() {
     	if (!pinceLibre()) {
-    		table.poserCubeSurTable(cubeTenu);
-    		return lacherCube();
+    		if (table.poserCubeSurTable(cubeTenu)) {
+        		return lacherCube();			
+    		}
     	}
     	return false;
     }

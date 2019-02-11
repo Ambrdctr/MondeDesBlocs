@@ -65,7 +65,7 @@ public class Table {
     public void afficherTable() {
     	System.out.println("Table : ");
     	for (int i = 0; i < sommetDePile.size(); i++) {
-    		sommetDePile.get(i).afficherCube();
+    		sommetDePile.get(i).afficherPile();
     		System.out.println("");
     	}
     }

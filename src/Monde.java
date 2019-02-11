@@ -25,9 +25,11 @@ public class Monde {
 		TailleCube tc;
 		do {
 		System.out.println("1 - creer un cube");
-		System.out.println("2 - détruire un cube");
+		System.out.println("2 - detruire un cube");
 		System.out.println("3 - prendre un cube");
-		System.out.println("4 - fin du monde");
+		System.out.println("4 - poser un cube sur la table");
+		System.out.println("5 - poser un cube sur un autre cube");
+		System.out.println("6 - fin du monde");
 		System.out.print("Votre choix : ");
 		choix = Keyboard.getInt();
 		System.out.println("");
@@ -41,13 +43,34 @@ public class Monde {
 			POC3.creerCube(tc, coul);
 			break;
 		case 2:
-			System.out.println("Le cube tenu par le robot va être détruit ");
+			System.out.println("Le cube tenu par le robot va etre detruit ");
 			Keyboard.pause();
 			POC3.detruireCube();
 			break;
+		case 3:
+			System.out.print("Couleur du cube : ");
+			coul = Couleur.getCouleur(Keyboard.getString());
+			ecrire (coul, "couleur saisie");
+			System.out.print("Taille (grand/moyen/petit) : ");
+			tc = TailleCube.getTaille(Keyboard.getString());
+			POC3.prendreCube(tc, coul);
+			break;
+		case 4:
+			System.out.println("Le cube tenu par le robot va etre pose sur la table ");
+			Keyboard.pause();
+			POC3.poserCubeSurTable();
+			break;
+		case 5:
+			System.out.print("Couleur du cube : ");
+			coul = Couleur.getCouleur(Keyboard.getString());
+			ecrire (coul, "couleur saisie");
+			System.out.print("Taille (grand/moyen/petit) : ");
+			tc = TailleCube.getTaille(Keyboard.getString());
+			POC3.poserCubeSurCube(tc, coul);
+			break;
 		}
 		afficherMonde(POC3, tab);
-		} while (choix != 4);
+		} while (choix != 6);
 	}
 
 	private static void afficherMonde(Robot R, Table T) {
