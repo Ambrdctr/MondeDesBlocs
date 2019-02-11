@@ -1,29 +1,29 @@
 
 public class Cube {
-    private TailleCube Taille;
+    private TailleCube taille;
 
     public TailleCube getTaille() {
         // Automatically generated method. Please do not modify this code.
-        return this.Taille;
+        return this.taille;
     }
 
-    private void setTaille(TailleCube value) {
+    public void setTaille(TailleCube value) {
         // Automatically generated method. Please do not modify this code.
-        this.Taille = value;
+        this.taille = value;
     }
 
-    private Couleur Couleur;
+    private Couleur couleur;
 
-    private Couleur getCouleur() {
+    public Couleur getCouleur() {
         // Automatically generated method. Please do not modify this code.
-        return this.Couleur;
+        return this.couleur;
     }
 
     private void setCouleur(Couleur value) {
         // Automatically generated method. Please do not modify this code.
-        this.Couleur = value;
+        this.couleur = value;
     }
-
+/*
     private int Numero;
 
     private int getNumero() {
@@ -35,7 +35,7 @@ public class Cube {
         // Automatically generated method. Please do not modify this code.
         this.Numero = value;
     }
-
+*/
     private Cube dessous;
 
     public Cube getDessous() {

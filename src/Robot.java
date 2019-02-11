@@ -1,88 +1,72 @@
 
 public class Robot {
-    public Cube cubeTenu = null;
+    public Cube cubeTenu;
+    private Table table;
 
     public boolean creerCube(TailleCube taille, Couleur couleur) {
-        if (pinceLibre()){
-            Cube cubeTenu = new Cube(couleur, taille);
-            return true;
-        }
-        return false;
+    	if (pinceLibre()) {
+    		return tenirCube(new Cube(taille,couleur));
+    	}
+    	return false;
     }
 
     public boolean pinceLibre() {
-        if (cubeTenu == null){
-            return true;
-        }
-        return false;
+    	return (cubeTenu == null);
     }
 
     public boolean tenirCube(Cube CubeATenir) {
-//begin of modifiable zone(JavaCode)......C/84153ce6-df5c-44c0-a0f7-eb19bb8943d9
-
-//end of modifiable zone(JavaCode)........E/84153ce6-df5c-44c0-a0f7-eb19bb8943d9
-//begin of modifiable zone(JavaReturned)..C/84153ce6-df5c-44c0-a0f7-eb19bb8943d9
-
-//end of modifiable zone(JavaReturned)....E/84153ce6-df5c-44c0-a0f7-eb19bb8943d9
+    	cubeTenu = CubeATenir;
+    	return true;
     }
 
     public boolean detruireCube() {
-        if (!pinceLibre()){
-            lacherCube();
-        }
-        return false;
+    	return (!pinceLibre() && lacherCube());
     }
 
     public boolean lacherCube() {
-        cubeTenu = null;
-        return true;
+    	cubeTenu = null;
+    	return true;
     }
 
     public boolean prendreCube(TailleCube taille, Couleur couleur) {
-        if (!pinceLibre()){
-            return false;
-        }
-        else {
-            if (existeSommet(taille, couleur)){
-
-            }
-        }
+    	if (pinceLibre()) {
+    		return tenirCube(table.retireSommet(taille, couleur));
+    	}
+    	return false;
     }
 
     public boolean poserCubeSurCube(TailleCube taille, Couleur couleur) {
-//begin of modifiable zone(JavaCode)......C/7a727d34-b840-4b49-b411-f24a953a4dcc
-
-//end of modifiable zone(JavaCode)........E/7a727d34-b840-4b49-b411-f24a953a4dcc
-//begin of modifiable zone(JavaReturned)..C/7a727d34-b840-4b49-b411-f24a953a4dcc
-
-//end of modifiable zone(JavaReturned)....E/7a727d34-b840-4b49-b411-f24a953a4dcc
+    	if (!pinceLibre()) {
+    		table.poserCubeSurCube(taille, couleur, cubeTenu);
+    		return lacherCube();
+    	}
+    	return false;
     }
 
     public boolean poserCubeSurTable() {
-//begin of modifiable zone(JavaCode)......C/279a2ed8-b923-4ca0-96af-4194935815f4
-
-//end of modifiable zone(JavaCode)........E/279a2ed8-b923-4ca0-96af-4194935815f4
-//begin of modifiable zone(JavaReturned)..C/279a2ed8-b923-4ca0-96af-4194935815f4
-
-//end of modifiable zone(JavaReturned)....E/279a2ed8-b923-4ca0-96af-4194935815f4
+    	if (!pinceLibre()) {
+    		table.poserCubeSurTable(cubeTenu);
+    		return lacherCube();
+    	}
+    	return false;
     }
 
     public Robot() {
-//begin of modifiable zone(JavaSuper).....C/6a90e436-6c89-4c81-b6ff-86ac27d0d280
-
-//end of modifiable zone(JavaSuper).......E/6a90e436-6c89-4c81-b6ff-86ac27d0d280
-//begin of modifiable zone(JavaCode)......C/6a90e436-6c89-4c81-b6ff-86ac27d0d280
-
-//end of modifiable zone(JavaCode)........E/6a90e436-6c89-4c81-b6ff-86ac27d0d280
+    	cubeTenu = null;
+    	table = null;
     }
 
     public Robot(Table table) {
-//begin of modifiable zone(JavaSuper).....C/355a2983-ec49-436e-9bd4-796f6e4b65b8
-
-//end of modifiable zone(JavaSuper).......E/355a2983-ec49-436e-9bd4-796f6e4b65b8
-//begin of modifiable zone(JavaCode)......C/355a2983-ec49-436e-9bd4-796f6e4b65b8
-
-//end of modifiable zone(JavaCode)........E/355a2983-ec49-436e-9bd4-796f6e4b65b8
+    	cubeTenu = null;
+    	this.table = table;
+    }
+    
+    public void afficherRobot() {
+    	System.out.println("Robot : ");
+    	if (!pinceLibre()) {
+    		System.out.println(cubeTenu.getTaille() + ", " + cubeTenu.getCouleur());
+    	}
+    	
     }
 
 }
